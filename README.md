@@ -25,11 +25,11 @@ ReportAndQueryController.scala
 # Salient Features of the implementation:
 
   
-1. Frond end : REST API + Angularjs
+1. Front end : REST API + Angularjs
   
 2. Back end  : Play framework + Scala
   
-3. Fron and back ends are based on asynchronous (nob-blocking) model
+3. Front and back ends are based on asynchronous (nob-blocking) model
   
 4. Data serialization using JSON
 
