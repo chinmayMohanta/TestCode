@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en" ng-app="lunaaApp">
+<head>
+    <meta charset="utf-8">
+    <title>Airport Reports</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/public/javascripts/app.js"></script>
+</head>
+<body >
+
+<div ng-controller="ReportController">
+
+    <form novalidate class="simple-form">
+
+        <H4>Generate Report  </h4>
+        <table>
+
+            <tr>
+                <td> Genererate report  </td><td><input type="submit" ng-click="update(user)" value="OK" /></td>
+
+            </tr>
+        </table>
+
+    </form>
+
+    <h1 ng-if="dataLoading" >
+        <font color="red">
+        Loading ......  Please wait, may takes minutes !!
+        </font>
+    </h1>
+
+    <table>
+        <H4>Top 10 countries with highest number of airports </h4>
+        <tbody>
+        <tr><td>{{haReports}}</td></tr>
+        </tbody>
+    </table>
+
+    <table>
+        <H4>Top 10 countries with lowest number of airports </h4>
+        <tbody>
+        <tr><td>{{laReports}}</td></tr>
+        </tbody>
+    </table>
+
+    <table>
+        <H4> Top 10 runway Identification </h4>
+        <tbody>
+        <tr><td>{{leIdentReports}}</td></tr>
+        </tbody>
+    </table>
+
+    <table>
+        <H4> Runway surface per country </h4>
+        <tbody>
+        <tr><td>{{surfaceReports}}</td></tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+</body>
+</html>

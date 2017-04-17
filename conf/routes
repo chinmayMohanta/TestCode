@@ -1,0 +1,19 @@
+# Application Routes
+
+# REST based API access
+GET     /api/airDetailByCC/:cc           controllers.ReportAndQueryController.airDetailbyCC(cc: String)
+GET     /api/airDetailByCN/:cn           controllers.ReportAndQueryController.airDetailbyCN(cn: String)
+GET     /api/hghestNumAirport/           controllers.ReportAndQueryController.highestNumAirport
+GET     /api/lowestNumAirport/           controllers.ReportAndQueryController.lowestNumAirport
+GET     /api/topLeIdent/           controllers.ReportAndQueryController.topLeIdent
+GET     /api/surfacePerCountry/           controllers.ReportAndQueryController.surfacePerCountry
+
+
+# GUI based access
+GET     /home                    controllers.Assets.at(path="/public/html", file="home.html")
+GET     /public/html/query.html                    controllers.Assets.at(path="/public/html", file="query.html")
+GET     /public/html/report.html                    controllers.Assets.at(path="/public/html", file="report.html")
+GET     /public/javascripts/app.js     controllers.Assets.at(path="/public/javascripts", file="app.js")
+
+
+
