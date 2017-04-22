@@ -26,7 +26,7 @@ class DataAccessService extends DataAccess {
     val count1 = new AtomicInteger()
     count1.set(0)
     for (line <- countriesBuffer.getLines) {
-      if (count1 ==0) count1.incrementAndGet() else {
+      if (count1.get() ==0) count1.incrementAndGet() else {
         val cols = line.split(",").map(x => x.replaceAll("\"", "").trim)
         countries += cols
         count1.incrementAndGet()
@@ -39,7 +39,7 @@ class DataAccessService extends DataAccess {
     var count2 =new AtomicInteger() // helper counter to skip the header
     count2.set(0)
     for (line <- airportsBuffer.getLines) {
-      if (count2 ==0) count2.incrementAndGet() else {
+      if (count2.get() ==0) count2.incrementAndGet() else {
         val cols = line.split(",").map(x=> x.replaceAll("\"","").trim)  // Remove the double quote
         airports += cols
         count2.incrementAndGet()
@@ -53,7 +53,7 @@ class DataAccessService extends DataAccess {
     var count3 =new AtomicInteger() // helper counter to skip the header
     count3.set(0)
     for (line <- runwaysBuffer.getLines) {
-      if (count3 ==0) count3.incrementAndGet() else {
+      if (count3.get() ==0) count3.incrementAndGet() else {
         val cols = line.split(",").map(x=> x.replaceAll("\"","").trim)
         runways += cols
         count3.incrementAndGet()
