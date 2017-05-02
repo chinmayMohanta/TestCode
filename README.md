@@ -1,4 +1,4 @@
-# TestCode Code for asessment
+# Play with play framework for fun
 
 Please clone or download this repo. The directory structure is as per the the layout of play famework.
 
